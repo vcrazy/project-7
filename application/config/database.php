@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = PRODUCTION ? 'localhost' : 'vega.rdb.superhosting.bg';
-$db['default']['database'] = $_SERVER['project7_db'];
-$db['default']['username'] = $_SERVER['project7_user'];
-$db['default']['password'] = $_SERVER['project7_pass'];
+$db['default']['hostname'] = 'localhost';
+$db['default']['database'] = 't3stovet_project7';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
