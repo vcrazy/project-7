@@ -17,7 +17,6 @@ class Model_apply extends MY_Model
         $query = $this->db->get_where('students_exams', array('student_id' => $student_id,'uni_subject_id'=>$uni_subject_id));
         return $query->num_rows();
     }
-
     
     public function save_student_exams ($insert_student_exams=array())
     {

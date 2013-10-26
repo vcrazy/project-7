@@ -41,7 +41,7 @@ class Wishlist extends MY_Controller
             }
         }
         
-        if (!empty($_POST)) 
+        if (!empty($_POST))
         {
             if ( !empty($_POST['data']) )
             {
@@ -69,7 +69,6 @@ class Wishlist extends MY_Controller
                 }
             }
         }
-        
         
 		$this->data['view'] = 'wishlist/index';
 		$this->load_view();

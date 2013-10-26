@@ -10,11 +10,11 @@
 		<div id="nav-container">
 			<div id="left-link-container" class="viewport">
 				<!-- <img id="left-pic" src="/img/section-exap.jpg" alt=""/> -->
-				<a href="#" id="exam-link" class="btn btn-default">Заявка за изпит</a>
+				<a href="#" id="exam-link" class="btn btn-default">ЗАЯВЕНИ ИЗПИТИ</a>
 			</div>
 			<div id="right-link-container" class="viewport">
 				<!-- <img id="right-pic" src="/img/section-apply.jpg" alt=""/> -->
-				<a href="#" id="apply-link" class="btn btn-default">Класиране</a>
+				<a href="#" id="apply-link" class="btn btn-default">КЛАСИРАНЕ</a>
 			</div>
 			<div class="clear"></div>
 		</div>

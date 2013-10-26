@@ -6,17 +6,17 @@
 	});
 </script>
 
-<form method="post" action="">
-	<select id="uni">
-		<option value="0">Моля, изберете университет</option>
-
-	<?php foreach($unis as $uni_id => $uni_name): ?>
-
-		<option value="<?php echo $uni_id; ?>"><?php echo $uni_name; ?></option>
-
-	<?php endforeach; ?>
-
-	</select>
+<div class="form_container">
+    <form method="post" action="">
+        <h1>ЖЕЛАЯ ДА СЕ ЯВЯ НА ИЗПИТ В:</h1>
+        Университет: <select id="uni">
+            <option value="0">Моля, изберете университет</option>
+            <?php foreach($unis as $uni_id => $uni_name): ?>
+                <option value="<?php echo $uni_id; ?>"><?php echo $uni_name; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </form>
+</div>
 
 	<?php foreach($faculties as $uni_id => $faculties_data): ?>
 

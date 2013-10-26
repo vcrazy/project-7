@@ -1,29 +1,51 @@
-*{margin:0;padding:0}
+*{margin:0;padding:0;}
+@font-face {
+    font-family: 'SEGOEUIL';
+    src: url('http://fontsforweb.com/public/fonts/1409/SEGOEUIL.eot');
+    src: local('SEGOEUIL'), url('http://fontsforweb.com/public/fonts/1409/SEGOEUIL.ttf') format('truetype');
+}
+
 .clear{
     clear:both;
 }
 body{
+    font-family:'SEGOEUIL';
+    font-weight:300;
 }
 header{
     text-align:center;
-    margin-top:10px;
+    margin-top:20px;
     margin-bottom:20px;
 }
 footer{
     text-align:center;
+    margin-top:50px;
+    margin-bottom:50px;
 }
 footer p{
     width:700px;
     margin-left:auto;
     margin-right:auto;
     margin-top:20px;
+    color:#838383;
+    font-size:12px;
+    line-height:14px;
+}
+
+footer a, footer a:visited{
+    color:#670666;
+    text-decoration:underline;
+}
+
+footer a:hover{
+    color:#789b00;
 }
 #wrapper{
     text-align:center;
 }
 #main{
     text-align:center;
-    background-image:url('/img/enter-header.jpg');
+    background-image:url('/img/enter-header-small.jpg');
     padding-bottom:100px;
 }
 #curtain-container{
@@ -36,43 +58,49 @@ footer p{
 }
 #left-curtain{
     background-color:#831f82;
-    width:54%;
+    width:53.65%;
 }
 #right-curtain{
-    width:46%;
+    width:46.35%;
     background-color:#b3e603;
 }
 #login{
     background-color:#831f82;
-    width:280px;
+    width:350px;
+    height:291px;
     margin-left:40%;
-    margin-top:80px;
+    margin-top:107px;
     border:1px solid #DDD;
-    padding:20px;
-    opacity:0.6;
+    padding-top:27px;
+    opacity:0.7;
     filter:alpha(opacity=60);
     border-radius:4px;
 }
 
-input[type="text"]{
+#login:hover {
+    opacity:0.9;
+}
+
+input[type="text"],input[type="password"]{
     margin-top:5px;
-    height:30px;
-    color:#08A;
+    height:50px;
+    color:#831f82;
     opacity:1.0;
     filter:alpha(opacity=100);
-    width:230px;
+    width:280px;
     margin-left:auto;
     margin-right:auto;
 }
 #login-submit{
-    padding:5px;
     background-color:#b3e603;
     border:none;
     color:#FFF;
-    margin-top:10px;
+    margin-top:16px;
     margin-left:auto;
     margin-right:auto;
     opacity:1.0;
-    width:230px;
+    width:280px;
+    height:50px;
     filter:alpha(opacity=100);
+    font-size:20px;
 }

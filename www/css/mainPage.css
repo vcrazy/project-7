@@ -4,45 +4,85 @@
 }
 #left-bar{
     background-color:#831f82;
-    width:54%;
+    width:53.65%;
 }
 #right-bar{
-	width:46%;
+	width:46.35%;
     background-color:#b3e603;
 }
 #nav-container{
 	background-color:#BBB;
-	height:350px;
 }
+
+#nav-container-second-page{
+	background-color:#BBB;
+	height:500px;
+}
+
 #left-link-container{
-	height:370px;
+	height:500px;
 	float:left;
-	width:50%;
+	width:53.65%;
 	background-image: url("/img/section-exap.jpg");
+    background-position: center;
+    background-repeat:no-repeat;
 }
 #right-link-container{
-	height:370px;
+	height:500px;
 	float:right;
-	width:50%;
+	width:46.35%;
 	background-image: url("/img/section-apply.jpg");
+    background-position:left center;
+    background-repeat:no-repeat;
 }
+
+.margin_top_18 {
+    margin-top:18px !important;
+}
+
+.margin_top_15 {
+    margin-top:15px !important;
+}
+
 #exam-link{
 	float:right;
 	margin-right:50px;
-	margin-top:150px;
-  	background-color:#831f82;
-  	color:#DDD;
+	margin-top:230px;
+  	color:#FFF;
   	border:0px !important;
-  	width: 200px !important;
+  	width: 336px !important;
+    height:74px;
+    background-image: url('/img/buttons-clean.png');
+    background-position: 0 74px;
+    font-size:26px;
+    line-height:60px;
 }
 #apply-link{
+    float:left;
+	margin-left:50px;
+	margin-top:230px;
+  	color:#FFF;
+  	border:0px !important;
+  	width: 336px !important;
+    height:74px;
+    background-image: url('/img/buttons-clean.png');
+    background-position: 0 0px;
+    font-size:26px;
+    line-height:60px;
+    
+/*    
+    
 	float:left;
 	margin-left:50px;
 	margin-top:150px;
-	background-color:#99C500;
-	color:#DDD;
+	color:#FFF;
+    height:74px;
 	border:0px !important;
-	width: 200px !important;
+	width: 336px !important;
+    font-size:26px;
+    line-height:60px;
+    background-image: url('/img/buttons-clean.png');
+    background-position: 0 0px;*/
 }
 .viewport {
     overflow: hidden;
