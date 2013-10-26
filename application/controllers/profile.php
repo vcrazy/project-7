@@ -12,9 +12,9 @@ class Profile extends MY_Controller
 
 	public function index()
 	{
-		$personal_info = $this->Model_profile->get_info();
-//		$exams_info = $this->Model_exams->get_exams();
+		$this->data['profile'] = $this->Model_profile->get_info();
+		$this->data['exams'] = $this->Model_exams->get_exams();
 
-		var_dump($personal_info);
+		$this->load_view('profile/index');
 	}
 }
