@@ -8,11 +8,7 @@
                 <link rel="stylesheet" type="text/css" href="/css/userLogin.css"/>
                 <script src="/js/jquery.min.js" type="text/javascript"></script>
                 <script src="/js/json3.min.js" type="text/javascript"></script>
-                <script src="/js/unis.js" type="text/javascript"></script>
-		<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<link href="/css/styles.css" rel="stylesheet" type="text/css" />
-		<script src="/js/jquery.min.js" type="text/javascript"></script>
-		<script src="/js/json3.min.js" type="text/javascript"></script>
+                <script src="/js/apply.js" type="text/javascript"></script>
 		<?php if(file_exists(FCPATH . 'js/' . $controller . '.js')): ?>
 			<script src="/js/<?php echo $controller; ?>.js" type="text/javascript"></script>
 		<?php endif; ?>
