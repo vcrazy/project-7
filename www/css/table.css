@@ -1,0 +1,44 @@
+.column-info{
+	border-bottom: 1px solid #b3e603;
+	color:  #838383;
+	margin-bottom: 10px;
+}
+.column-data{
+	height:90px;
+	text-align:center;
+}
+.verticle-center{
+	/* Internet Explorer 10 */
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+
+	/* Safari, Opera, and Chrome */
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
+	/* W3C */
+	display:box;
+	box-pack:center;
+	box-align:center;
+
+	font-size: 16px;
+}
+.waiting{
+	background-color:#F1F1F1;
+}
+.done{
+
+}
+.accepted > div:first-child{
+	color:rgb(16, 192, 16);
+}
+.not-accepted > div:first-child{
+	color:rgb(231, 34, 34);
+}
