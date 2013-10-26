@@ -17,6 +17,7 @@ class Home extends MY_Controller
                 $this->data['view'] = 'home/index';
                 $this->getIndexData();
 		$this->load_view();
+
         }
         
         public function getIndexData(){
@@ -30,5 +31,5 @@ class Home extends MY_Controller
                 header("Location:/apply");
                 exit();
             }
-        }
+	}
 }
