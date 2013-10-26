@@ -44,3 +44,17 @@ ERROR - 2013-10-26 09:30:16 --> Unable to select database: t3stovet_project7
 ERROR - 2013-10-26 09:30:17 --> Unable to select database: t3stovet_project7
 ERROR - 2013-10-26 09:30:30 --> Unable to select database: t3stovet_project7
 ERROR - 2013-10-26 09:30:31 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 13:05:09 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 13:07:09 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 13:07:12 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 13:07:33 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 13:08:33 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 13:08:35 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 13:08:35 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 14:47:42 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 14:49:01 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 14:49:03 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 14:49:03 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 14:49:03 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 14:49:04 --> Unable to select database: t3stovet_project7
+ERROR - 2013-10-26 14:49:07 --> Unable to select database: t3stovet_project7
