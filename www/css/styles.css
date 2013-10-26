@@ -35,3 +35,25 @@
 	height: 43px;
 	background: url('/img/icons-status.png') 43px;
 }
+
+#ranking h2 {
+	color: #831f82;
+	text-align: left;
+	font-size: 24px;
+	margin: 50px 20px;
+    font-family: 'SEGOEUIL' !important;
+	text-transform: uppercase;
+}
+
+#request_button {
+	display: inline-block;
+	width: 340px;
+	padding: 20px 40px;
+	background-color: #831f82;
+	font-size: 24px;
+    font-family: 'SEGOEUIL' !important;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 5px;
+	margin: 80px 0px;
+}
