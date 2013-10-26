@@ -22,7 +22,7 @@ class MY_Model extends CI_Model
 
 		return $query->row_array();
 	}
-
+    
 	protected function single($query, $col)
 	{
 		if(!$query->num_rows()) return FALSE;

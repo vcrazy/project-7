@@ -33,5 +33,12 @@ class Home extends MY_Controller
                 header("Location:/apply");
                 exit();
             }
-	}
+        }
+        
+        public function choose()
+        {
+            $this->data['content_title'] = 'Избери';
+            $this->data['view'] = 'home/main';
+            $this->load_view();
+        }
 }

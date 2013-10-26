@@ -5,7 +5,34 @@ class Wishlist extends MY_Controller
 	public function index()
 	{
 		$this->_get_dummy_data();
-
+        
+        $this->load->model('Model_wishlist');
+        $this->data['unis']=array();
+        $this->data['faculties']=array();
+        $universities=$this->Model_wishlist->get_universities();
+        $faculties=$this->Model_wishlist->get_faculties();
+        if( !empty($universities) && (!empty($faculties)) )
+        {
+            foreach ($universities as $single_university)
+            {
+                $this->data['unis'][$single_university['id']]=$single_university['name'];
+            }
+            
+            foreach ($faculties as $single_faculty)
+            {
+                $subjectinfo=array($single_faculty);
+                if (!isset($this->data['faculties'][$single_faculty['uni_id']]))
+				{
+					$this->data['faculties'][$single_faculty['uni_id']]=array();
+				}
+				if (!isset($this->data['faculties'][$single_faculty['uni_id']][$single_faculty['id']]))
+				{
+					$this->data['faculties'][$single_faculty['uni_id']][$single_faculty['id']]=$single_faculty['name'];
+				}
+            }
+        }
+        
+        
 		$this->data['view'] = 'wishlist/index';
 		$this->load_view();
 	}
@@ -13,18 +40,15 @@ class Wishlist extends MY_Controller
 	private function _get_dummy_data()
 	{
 		// unis that I have already selected during the exam process
-		$this->data['unis'] = array(
-			1 => 'Sofia Uni'
-		);
 
-		$this->data['faculties'] = array(
-			// 1 = uni_id
-			1 => array(
-				// faculty id => Faculty name
-				50 => 'Faculty FMI',
-				51 => 'Faculty 2'
-			)
-		);
+//		$this->data['faculties'] = array(
+//			// 1 = uni_id
+//			1 => array(
+//				// faculty id => Faculty name
+//				50 => 'Faculty FMI',
+//				51 => 'Faculty 2'
+//			)
+//		);
 
 		$this->data['specialties'] = array(
 			// faculty id
