@@ -49,7 +49,7 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['database'] = 't3stovet_project7';
+$db['default']['database'] = $_SERVER['db'] ?: 't3stovet_project7';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['dbdriver'] = 'mysql';
