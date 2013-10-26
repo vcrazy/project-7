@@ -17,5 +17,13 @@ class Model_wishlist extends MY_Model
         $query = $this->db->get();
         return $this->results($query);
     }
+    
+    public function get_specialties() 
+    {
+        $this->db->select('id,faculty_id,name,info');
+        $this->db->from('specialties');
+        $query = $this->db->get();
+        return $this->results($query);
+    }
 }
 
