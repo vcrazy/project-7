@@ -8,12 +8,20 @@ $(document).ready(function(){
 		$('.uni_change:not(.hidden)').addClass('hidden');
 		$('#exams_' + uni_id).removeClass('hidden');
 		$('#save').addClass('hidden');
+		$('#exam_info').text('');
 	});
 
 	$('.uni_change').change(function(e){
-		var exam_id = $(e.target).val() * 1;
+		var uni_id = $('#uni').val(),
+			exam_id = $(e.target).val() * 1;
 
 		$('#save').toggleClass('hidden', !exam_id);
+
+		if(exam_id){
+			$('#exam_info').text(exams[uni_id][exam_id].info);
+		}else{
+			$('#exam_info').text('');
+		}
 	});
 
 	$('#save').click(function(){
@@ -43,11 +51,14 @@ $(document).ready(function(){
 
 		$('#save').addClass('hidden');
 		$('#send').removeClass('hidden');
+		$('#exam_info').text('');
 	});
 
 	$('#send').click(function(e){
 		$(e.target).closest('form').append('<input type="hidden" name="data" />');
 		$(e.target).closest('form').find('input[type=hidden]').val(JSON.stringify(unis));
+
 		return true;
 	});
+
 });
