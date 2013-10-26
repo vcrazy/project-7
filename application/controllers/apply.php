@@ -77,6 +77,11 @@ class Apply extends MY_Controller
 
 	public function form()
 	{
+		$this->load->model('Model_apply');
+		$applications = $this->Model_apply->get_applications();
+
+		$this->data['applications'] = $applications;
+
 		$this->data['view'] = 'apply/form';
 		$this->load_view();
 	}

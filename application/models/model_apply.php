@@ -33,4 +33,20 @@ class Model_apply extends MY_Model
         $query = $this->db->get();
         return $this->results($query);
     }
+
+	public function get_applications($user_id = 1)
+	{
+		// Get all my applications and positions
+
+		$this->db->select('s.name AS s_name, f.name AS f_name, u.name AS u_name, st.bal, (SELECT COUNT(*) FROM standing WHERE specialty_id = st.specialty_id AND bal > st.bal) + 1 AS position, s.entry_number AS total');
+		$this->db->from('student_wishlist AS sw');
+		$this->db->join('specialties AS s', 'sw.specialty_id = s.id');
+		$this->db->join('faculties AS f', 's.faculty_id = f.id');
+		$this->db->join('universities AS u', 'f.uni_id = u.id');
+		$this->db->join('standing AS st', 'sw.student_id = st.user_id AND sw.specialty_id = st.specialty_id', 'left');
+		$this->db->where('sw.student_id', $user_id);
+		$query = $this->db->get();
+
+		return $this->results($query);
+	}
 }
