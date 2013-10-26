@@ -74,4 +74,10 @@ class Apply extends MY_Controller
 		$this->data['view'] = 'apply/index';
 		$this->load_view();
 	}
+
+	public function form()
+	{
+		$this->data['view'] = 'apply/form';
+		$this->load_view();
+	}
 }
