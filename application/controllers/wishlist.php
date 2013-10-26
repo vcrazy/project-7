@@ -48,9 +48,25 @@ class Wishlist extends MY_Controller
                 $data_array=json_decode($_POST['data'],true);
                 if (!empty($data_array))
                 {
-                    
+                    $insert_student_wishlist=array();
+                    foreach($data_array as $single_data_array)
+                    {
+                        $user_id=$this->session->userdata('id');
+                        if (empty($user_id))
+                        {
+                            $user_id=1;
+                        }
+                        if ($this->Model_wishlist->check_student_wishlist($user_id,$single_data_array['specialty_id'])==0)
+                        {
+                            $insert_student_wishlist[]=array('student_id'=>$user_id,'specialty_id'=>$single_data_array['specialty_id']);
+                        }
+                    }
+
+                    if (!empty($insert_student_wishlist))
+                    {
+                        $this->Model_wishlist->save_student_wishlist($insert_student_wishlist);
+                    }
                 }
-//                uni_id, faculty_id, specialty_id
             }
         }
         
