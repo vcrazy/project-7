@@ -1,1 +1,0 @@
-apply list all
