@@ -6,3 +6,5 @@
 	</p>
 	<a href="#">Общи условия за ползване</a>
 </footer>
+
+<script src="/js/app.js" type="text/javascript"></script>

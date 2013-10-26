@@ -15,33 +15,16 @@
 	height:350px;
 }
 #left-link-container{
-	height:350px;
+	height:370px;
 	float:left;
-	overflow: hidden;
 	width:50%;
+	background-image: url("/img/section-exap.jpg");
 }
 #right-link-container{
-	height:350px;
+	height:370px;
 	float:right;
-	overflow: hidden;
 	width:50%;
-}
-#left-link-frame{
-	background-image:url("/img/section-exap.jpg");
-	height:350px;
-}
-#right-link-frame{
-	background-image:url("/img/section-apply.jpg");
-	height:350px;
-
-}
-#left-link-container-background>img{
-	width:50%;
-	float:left;
-}
-#right-link-container-background>img{
-	width:50%;
-	float:right;
+	background-image: url("/img/section-apply.jpg");
 }
 #exam-link{
 	float:right;
@@ -60,4 +43,16 @@
 	color:#DDD;
 	border:0px !important;
 	width: 200px !important;
+}
+.viewport {
+    overflow: hidden;
+}
+
+.viewport img {
+	height:100%;
+	width:100%;
+    left: -20px;
+    position: relative;
+    top: -20px;
+    width: 500px;
 }
