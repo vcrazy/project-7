@@ -6,6 +6,8 @@ body{
 }
 header{
     text-align:center;
+    margin-top:10px;
+    margin-bottom:20px;
 }
 footer{
     text-align:center;
@@ -14,7 +16,7 @@ footer p{
     width:700px;
     margin-left:auto;
     margin-right:auto;
-    margin-top:50px;
+    margin-top:20px;
 }
 #wrapper{
     text-align:center;

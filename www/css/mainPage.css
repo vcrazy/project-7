@@ -1,0 +1,63 @@
+#bottom-bars-container{
+    height:10px;
+    width:100%;
+}
+#left-bar{
+    background-color:#831f82;
+    width:54%;
+}
+#right-bar{
+	width:46%;
+    background-color:#b3e603;
+}
+#nav-container{
+	background-color:#BBB;
+	height:350px;
+}
+#left-link-container{
+	height:350px;
+	float:left;
+	overflow: hidden;
+	width:50%;
+}
+#right-link-container{
+	height:350px;
+	float:right;
+	overflow: hidden;
+	width:50%;
+}
+#left-link-frame{
+	background-image:url("/img/section-exap.jpg");
+	height:350px;
+}
+#right-link-frame{
+	background-image:url("/img/section-apply.jpg");
+	height:350px;
+
+}
+#left-link-container-background>img{
+	width:50%;
+	float:left;
+}
+#right-link-container-background>img{
+	width:50%;
+	float:right;
+}
+#exam-link{
+	float:right;
+	margin-right:50px;
+	margin-top:150px;
+  	background-color:#831f82;
+  	color:#DDD;
+  	border:0px !important;
+  	width: 200px !important;
+}
+#apply-link{
+	float:left;
+	margin-left:50px;
+	margin-top:150px;
+	background-color:#99C500;
+	color:#DDD;
+	border:0px !important;
+	width: 200px !important;
+}
