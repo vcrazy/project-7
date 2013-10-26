@@ -30,7 +30,7 @@ class Home extends MY_Controller
                     var_dump($user_data);
                 }
                 //redirect to profile.....
-                header("Location:/apply");
+                header("Location: /home/choose");
                 exit();
             }
         }

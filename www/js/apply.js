@@ -9,6 +9,8 @@ $(document).ready(function(){
 		$('#exams_' + uni_id).removeClass('hidden');
 		$('#save').addClass('hidden');
 		$('#exam_info').text('');
+
+		$('#exams_' + uni_id + ' option:first').attr('selected', true);
 	});
 
 	$('.uni_change').change(function(e){

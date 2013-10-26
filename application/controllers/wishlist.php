@@ -3,15 +3,14 @@
 class Wishlist extends MY_Controller
 {	
 	public function index()
-	{
-		$this->_get_dummy_data();
-        
+	{   
         $this->load->model('Model_wishlist');
         $this->data['unis']=array();
         $this->data['faculties']=array();
         $universities=$this->Model_wishlist->get_universities();
         $faculties=$this->Model_wishlist->get_faculties();
-        if( !empty($universities) && (!empty($faculties)) )
+        $specialties=$this->Model_wishlist->get_specialties();
+        if( !empty($universities) && (!empty($faculties) && (!empty($specialties))) )
         {
             foreach ($universities as $single_university)
             {
@@ -20,7 +19,6 @@ class Wishlist extends MY_Controller
             
             foreach ($faculties as $single_faculty)
             {
-                $subjectinfo=array($single_faculty);
                 if (!isset($this->data['faculties'][$single_faculty['uni_id']]))
 				{
 					$this->data['faculties'][$single_faculty['uni_id']]=array();
@@ -30,45 +28,34 @@ class Wishlist extends MY_Controller
 					$this->data['faculties'][$single_faculty['uni_id']][$single_faculty['id']]=$single_faculty['name'];
 				}
             }
+            
+            foreach ($specialties as $single_specialty)
+            {
+                $specialty=array('name'=>$single_specialty['name'],'info'=>$single_specialty['info']);
+                if (!isset($this->data['specialties'][$single_specialty['faculty_id']]))
+				{
+					$this->data['specialties'][$single_specialty['faculty_id']]=array();
+				}
+                
+                $this->data['specialties'][$single_specialty['faculty_id']][$single_specialty['id']]=$specialty;
+            }
+        }
+        
+        if (!empty($_POST)) 
+        {
+            if ( !empty($_POST['data']) )
+            {
+                $data_array=json_decode($_POST['data'],true);
+                if (!empty($data_array))
+                {
+                    
+                }
+//                uni_id, faculty_id, specialty_id
+            }
         }
         
         
 		$this->data['view'] = 'wishlist/index';
 		$this->load_view();
-	}
-
-	private function _get_dummy_data()
-	{
-		// unis that I have already selected during the exam process
-
-//		$this->data['faculties'] = array(
-//			// 1 = uni_id
-//			1 => array(
-//				// faculty id => Faculty name
-//				50 => 'Faculty FMI',
-//				51 => 'Faculty 2'
-//			)
-//		);
-
-		$this->data['specialties'] = array(
-			// faculty id
-			50 => array(
-				// specialty id
-				100 => array(
-					'name' => 'Spec 1',
-					'info' => 'Info 1'
-				),
-				101 => array(
-					'name' => 'Spec 2',
-					'info' => 'Info 2'
-				)
-			),
-			51 => array(
-				102 => array(
-					'name' => 'Spec 3',
-					'info' => 'Info 3'
-				)
-			)
-		);
 	}
 }
