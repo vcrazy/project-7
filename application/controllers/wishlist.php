@@ -41,6 +41,19 @@ class Wishlist extends MY_Controller
             }
         }
         
+        if (!empty($_POST)) 
+        {
+            if ( !empty($_POST['data']) )
+            {
+                $data_array=json_decode($_POST['data'],true);
+                if (!empty($data_array))
+                {
+                    
+                }
+//                uni_id, faculty_id, specialty_id
+            }
+        }
+        
         
 		$this->data['view'] = 'wishlist/index';
 		$this->load_view();
