@@ -1,62 +1,94 @@
 $(document).ready(function(){
 
-	var unis = [];
+	var specs = [];
 
 	$('#uni').change(function(e){
 		var uni_id = $(e.target).val();
 
-		$('.uni_change:not(.hidden)').addClass('hidden');
-		$('#exams_' + uni_id).removeClass('hidden');
+		$('.faculty_change:not(.hidden)').addClass('hidden');
+		$('.specialty_change:not(.hidden)').addClass('hidden');
+		$('#faculty_' + uni_id).removeClass('hidden');
 		$('#save').addClass('hidden');
-		$('#exam_info').text('');
+		$('#specialty_info').text('');
+
+		$('#faculty_' + uni_id + ' option:first').attr('selected', true);
 	});
 
-	$('.uni_change').change(function(e){
-		var uni_id = $('#uni').val(),
-			exam_id = $(e.target).val() * 1;
+	$('.faculty_change').change(function(e){
+		var faculty_id = $(e.target).val() * 1;
 
-		$('#save').toggleClass('hidden', !exam_id);
+		$('.specialty_change:not(.hidden)').addClass('hidden');
+		$('#specialty_' + faculty_id).toggleClass('hidden', !faculty_id);
+		$('#save').addClass('hidden');
+		$('#specialty_info').text('');
 
-		if(exam_id){
-			$('#exam_info').text(exams[uni_id][exam_id].info);
+		$('#specialty_' + faculty_id + ' option:first').attr('selected', true);
+	});
+
+	$('.specialty_change').change(function(e){
+		var faculty_id,
+			specialty_id = $(e.target).val();
+
+		for(var faculty_id_ in specialties){
+			var specialty_keys = $.map(specialties[faculty_id_], function(v, i){return i;});
+			if($.inArray(specialty_id, specialty_keys) > -1){
+				faculty_id = faculty_id_;
+				break;
+			}
+		}
+
+		specialty_id *= 1;
+
+		$('#save').toggleClass('hidden', !specialty_id);
+
+		if(specialty_id){
+			$('#specialty_info').text(specialties[faculty_id][specialty_id].info);
 		}else{
-			$('#exam_info').text('');
+			$('#specialty_info').text('');
 		}
 	});
 
 	$('#save').click(function(){
 		var uni_id = $('#uni').val(),
 			uni_name = $('#uni option[value=' + uni_id + ']').text(),
-			exam_id = $('#exams_' + uni_id).val(),
-			exam_name = $('#exams_' + uni_id + ' option[value=' + exam_id + ']').text();
+			faculty_id = $('#faculty_' + uni_id).val(),
+			faculty_name = $('#faculty_' + uni_id + ' option[value=' + faculty_id + ']').text(),
+			specialty_id = $('#specialty_' + faculty_id).val(),
+			specialty_name = $('#specialty_' + faculty_id + ' option[value=' + specialty_id + ']').text();
 
-		$('#selected_exams').append('<div>' + uni_name + ': ' + exam_name + '</div>');
+		$('#selected_specialties').append('<div>' + uni_name + ': ' + faculty_name + ', ' + specialty_name + '</div>');
 
-		unis.push({
+		specs.push({
 			uni_id: uni_id,
-			exam_id: exam_id
+			faculty_id: faculty_id,
+			specialty_id: specialty_id
 		});
 
-		$('#exams_' + uni_id).find('option[value=' + exam_id + ']').remove();
+		$('#specialty_' + faculty_id).find('option[value=' + specialty_id + ']').remove();
 
-		if($('#exams_' + uni_id + ' option').length <= 1){
+		if($('#specialty_' + faculty_id + ' option').length <= 1){
+			$('#specialty_' + faculty_id).remove();
+			$('#faculty_' + uni_id).find('option[value=' + faculty_id + ']').remove();
 
-			$('#exams_' + uni_id).remove();
-			$('#uni').find('option[value=' + uni_id + ']').remove();
+			if($('#faculty_' + uni_id + ' option').length <= 1){
 
-			if($('#uni option').length <= 1){
-				$('#uni').remove();
+				$('#faculty_' + uni_id).remove();
+				$('#uni').find('option[value=' + uni_id + ']').remove();
+
+				if($('#uni option').length <= 1){
+					$('#uni').remove();
+				}
 			}
 		}
 
 		$('#save').addClass('hidden');
 		$('#send').removeClass('hidden');
-		$('#exam_info').text('');
+		$('#specialty_info').text('');
 	});
 
 	$('#send').click(function(e){
 		$(e.target).closest('form').append('<input type="hidden" name="data" />');
-		$(e.target).closest('form').find('input[type=hidden]').val(JSON.stringify(unis));
+		$(e.target).closest('form').find('input[type=hidden]').val(JSON.stringify(specs));
 
 		return true;
 	});
