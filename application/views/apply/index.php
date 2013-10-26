@@ -1,3 +1,10 @@
+<script>
+	$(document).ready(function(){
+		unis = <?php echo json_encode($unis); ?>,
+		exams = <?php echo json_encode($exams); ?>;
+	});
+</script>
+
 <form method="post" action="">
 	<select id="uni">
 		<option value="0">Моля, изберете университет</option>
@@ -22,6 +29,10 @@
 	<?php endforeach; ?>
 
 	<input type="button" id="save" value="Избери" class="hidden" />
+
+	<div id="exam_info">
+		
+	</div>
 
 	<div id="selected_exams">
 		
