@@ -32,4 +32,17 @@ class Model_apply extends MY_Model
         $query = $this->db->get();
         return $this->results($query);
     }
+
+	public function get_exam_list($user_id = 1)
+	{
+		$this->db->select('u.name AS u_name, s.name AS s_name, us.dateof, se.grade');
+		$this->db->from('students_exams AS se');
+		$this->db->join('university_subject AS us', 'se.uni_subject_id = us.id');
+		$this->db->join('universities AS u', 'u.id = us.uni_id');
+		$this->db->join('subjects AS s', 's.id = us.subject_id');
+		$this->db->where('se.student_id', $user_id);
+		$query = $this->db->get();
+
+		return $this->results($query);
+	}
 }

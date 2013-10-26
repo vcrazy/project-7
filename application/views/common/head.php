@@ -9,6 +9,8 @@
                 <link rel="stylesheet" type="text/css" href="/css/userLogin.css"/>
                 <script src="/js/jquery.min.js" type="text/javascript"></script>
                 <script src="/js/json3.min.js" type="text/javascript"></script>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link href="/css/bootstrap-responsive.css" rel="stylesheet">
 		<?php if(file_exists(FCPATH . 'js/' . $controller . '.js')): ?>
 			<script src="/js/<?php echo $controller; ?>.js" type="text/javascript"></script>
 		<?php endif; ?>
