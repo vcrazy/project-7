@@ -74,4 +74,15 @@ class Wishlist extends MY_Controller
 		$this->data['view'] = 'wishlist/index';
 		$this->load_view();
 	}
+
+	public function all()
+	{
+		$this->load->model('Model_wishlist');
+		$applications = $this->Model_wishlist->get_applications();
+
+		$this->data['applications'] = $applications;
+
+		$this->data['view'] = 'wishlist/all';
+		$this->load_view();
+	}
 }
