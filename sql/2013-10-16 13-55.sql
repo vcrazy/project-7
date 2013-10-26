@@ -23,6 +23,72 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура на таблица `ci_sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(45) NOT NULL DEFAULT '0',
+  `user_agent` varchar(120) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_data` text NOT NULL,
+  PRIMARY KEY (`session_id`),
+  KEY `last_activity_idx` (`last_activity`)
+) ENGINE=MyISAM DEFAULT CHARSET=cp1251;
+
+--
+-- Ссхема на данните от таблица `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
+('ef73cf9272effa9576f6344736f77896', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', 1382784846, '');
+
+-- --------------------------------------------------------
+
+--
+-- Структура на таблица `subjects`
+--
+
+CREATE TABLE IF NOT EXISTS `subjects` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(320) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Ссхема на данните от таблица `subjects`
+--
+
+INSERT INTO `subjects` (`id`, `name`) VALUES
+(1, 'Математика 1'),
+(2, 'Български език'),
+(3, 'Математика 2'),
+(4, 'Биология');
+
+-- --------------------------------------------------------
+
+--
+-- Структура на таблица `universities`
+--
+
+CREATE TABLE IF NOT EXISTS `universities` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(320) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Ссхема на данните от таблица `universities`
+--
+
+INSERT INTO `universities` (`id`, `name`) VALUES
+(1, 'Софийски университет "Св. Климент Охридски"'),
+(2, 'Университет за национално и световно стопанство'),
+(3, 'Университет по архитектура, строителство и геодезия');
+
+-- --------------------------------------------------------
+
+--
 -- Структура на таблица `university_subject`
 --
 
