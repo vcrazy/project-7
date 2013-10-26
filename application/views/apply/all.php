@@ -1,0 +1,6 @@
+apply all
+<?php
+	/*
+	 * $applications
+	 */
+?>
