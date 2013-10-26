@@ -11,7 +11,6 @@ class Apply extends MY_Controller
 //            apply
 //            
 //              
-
 		$this->_set_dummy_data();
 
                 $this->load->model('Model_apply');
