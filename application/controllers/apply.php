@@ -14,6 +14,8 @@ class Apply extends MY_Controller
 
 		$this->_set_dummy_data();
 
+                $this->load->model('Model_apply');
+                $this->Model_apply->get_universities();
 		$this->data['view'] = 'apply/index';
 		$this->load_view();
 	}
