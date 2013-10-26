@@ -27,7 +27,6 @@ class Home extends MY_Controller
                 {
                     $user_data['is_logged']=1;
                     $this->session->set_userdata($user_data);
-                    var_dump($user_data);
                 }
                 //redirect to profile.....
                 header("Location: /home/choose");
