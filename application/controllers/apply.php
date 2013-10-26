@@ -68,6 +68,9 @@ class Apply extends MY_Controller
             }
         }
         
+//        var_dump($this->data['unis']);
+        var_dump($this->data['exams']);
+        
 		$this->data['view'] = 'apply/index';
 		$this->load_view();
 	}
