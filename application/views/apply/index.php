@@ -1,4 +1,4 @@
-<form method="POST" action="">
+<form method="post" action="">
 	<select id="uni">
 		<option value="0">Моля, изберете университет</option>
 
@@ -22,5 +22,11 @@
 	<?php endforeach; ?>
 
 	<input type="button" id="save" value="Избери" class="hidden" />
+
+	<div id="selected_exams">
+		
+	</div>
+
+	<input type="submit" id="send" value="Изпрати всички" class="hidden" />
 
 </form>
