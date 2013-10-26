@@ -1,44 +1,34 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Home extends MY_Controller
-{	
-	public function index()
-	{
-		$this->data['view'] = 'home/index';
+{
+        protected $data;
 
-		$this->load_view();
-	}
+                public function __construct()
+                {
+                        parent::__construct();
+
+                        $this->load->model('Model_home');//???
+                }
         
-        public function profileData()
+        public function index() 
         {
-            // Initialize variables and set to empty strings
-             $email="";
-             $password="";
-
-            // Validate input and sanitize
-if ($_SERVER['REQUEST_METHOD']== "POST") {
-   if (empty($_POST["firstName"])) {
-      $firstNameErr = "First name is required";
-   }
-   else {
-      $firstName = test_input($_POST["firstName"]);
-   }
-   if (empty($_POST["lastName"])) {
-      $lastNameErr = "Last name is required";
-   }
-   else {
-      $lastName = test_input($_POST["lastName"]);
-   }
-}
-
-// Sanitize data
-function test_input($data) {
-   $data = trim($data);
-   $data = stripslashes($data);
-   $data = htmlspecialchars($data);
-   return $data;
-}
+                $this->data['content_title'] = 'Начална страница';
+                $this->data['view'] = 'home/index';
+                $this->getIndexData();
+		$this->load_view();
+        }
+        
+        public function getIndexData(){
+            if (!empty($_POST)) {
+                $this->load->helper(array('url'));
+                $this->session->set_userdata(array(
+                    //Ado da mi napravi funkciq koqto vrushta masiv
+                    //dobata forma
+                ));
+                //redirect to profile.....
+                header("Location:/apply");
+                exit();
+            }
         }
 }
-
-
