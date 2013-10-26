@@ -14,6 +14,7 @@ class Profile extends MY_Controller
 	{
 		$this->data['profile'] = $this->Model_profile->get_info();
 		$this->data['exams'] = $this->Model_exams->get_exams();
+		$this->data['standing'] = $this->Model_profile->get_standing();
 
 		$this->load_view('profile/index');
 	}
