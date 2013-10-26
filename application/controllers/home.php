@@ -25,7 +25,9 @@ class Home extends MY_Controller
                 $user_data=$this->Model_home->load_user_info($user_id=1);
                 if(!empty($user_data))
                 {
-                    $this->session->set_userdata(array($user_data));
+                    $user_data['is_logged']=1;
+                    $this->session->set_userdata($user_data);
+                    var_dump($user_data);
                 }
                 //redirect to profile.....
                 header("Location:/apply");

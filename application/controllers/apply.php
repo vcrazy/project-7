@@ -4,6 +4,12 @@ class Apply extends MY_Controller
 {	
 	public function index()
 	{
+        if(!$this->session->userdata('is_logged'))
+        {
+//            header("Location:/home");
+//            exit();
+        }
+        
 		$this->load->model('Model_apply');
 		$universities_subjects=$this->Model_apply->get_universities_subject();
 
@@ -41,7 +47,12 @@ class Apply extends MY_Controller
                         $uni_subject_id=$this->Model_apply->get_university_subject_id($single_data_array);
                         if ( $uni_subject_id['id']>0 )
                         {
-                            if ($this->Model_apply->check_student_exam(1,$uni_subject_id['id']) ==0)
+                            $user_id=$this->session->userdata('id');
+                            if (empty($user_id))
+                            {
+                                $user_id=1;
+                            }
+                            if ($this->Model_apply->check_student_exam($user_id,$uni_subject_id['id']) ==0)
                             {
                                 var_dump($uni_subject_id['id']);
                                 $insert_student_exams[]=array('student_id'=>1,'uni_subject_id'=>$uni_subject_id['id']);
