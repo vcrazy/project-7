@@ -10,10 +10,10 @@ $(document).ready(function(){
 		$('#faculty_' + uni_id).removeClass('hidden');
         
         if ($('#faculty_' + uni_id).hasClass('hidden')) {
-            $('#faculty_show').removeClass('hidden');
+            $('#faculty_show').addClass('hidden');
 //            $('#faculty_show').toggleClass('hidden', uni_id);
         } else {
-          $('#faculty_show').addClass('hidden');  
+          $('#faculty_show').removeClass('hidden');  
         }
         
         $('#faculty_show').toggleClass('hidden', uni_id);
