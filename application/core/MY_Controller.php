@@ -13,9 +13,9 @@ class MY_Controller extends CI_Controller
 			header("Location: /home");
 			exit;
 		}
-		else if($this->data['controller'] == 'home' && $this->session->userdata('is_logged'))
+		else if($this->data['controller'] == 'home' && $this->data['action'] == 'index' && $this->session->userdata('is_logged'))
 		{
-			header("Location: /wishlist/all");
+			header("Location: /home/choose");
 			exit;
 		}
 
@@ -36,6 +36,7 @@ class MY_Controller extends CI_Controller
 	protected function load_data()
 	{
 		$this->data['controller'] = strtolower($this->router->fetch_class());
+		$this->data['action'] = strtolower($this->router->fetch_method());
 	}
 
 	protected function load_view($view_name = 'default_view')
