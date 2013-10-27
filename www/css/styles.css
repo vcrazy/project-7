@@ -76,6 +76,7 @@ select::-moz-focus-inner {
     margin:0 auto;
     background-color: #f5f5f5;
     padding-top:20px;
+    font-family:'SEGOE UI';
 }
 
 

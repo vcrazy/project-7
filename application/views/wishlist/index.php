@@ -62,13 +62,11 @@
                     Оценка от матура по <i>Математика</i> : <strong>4.63</strong><br/>
                     Оценка от диплома по <i>Математика</i> : <strong>5.12</strong><br/><br/>
                     
-                    <span style="font-family:'SEGOE UI';font-weight:bold">ВАШИЯТ СЪСТЕЗАТЕЛЕН БАЛ Е:</span>
-                    <span style="font-family:'SEGOE UI';font-weight:bold; font-size:27px;">25.41</span>
-                    <span></span><br/>
-                    <span style="font-size:10px;">Състезателния бал образуван по формулата (предвид най-висок бал):<br/>
+                    <span style="font-weight:bold">ВАШИЯТ СЪСТЕЗАТЕЛЕН БАЛ Е:</span>
+                    <span style="font-weight:bold; font-size:27px;">20.69</span>
+                    <span style="font-size:10px;">(24 максимален бал*)</span><br/><br/>
+                    <span style="font-size:12px;">Състезателния бал образуван по формулата (предвид най-висок бал):<br/>
                     3* Математика 2 + Математика(диплома)</span>
-
-                    Бал (24 максимален бал*)
                 </div>
 
             </div>
@@ -81,8 +79,8 @@
 		
 	</div>-->
 
-	<div id="selected_specialties">
+<!--	<div id="selected_specialties">
 		
-	</div>
+	</div>-->
 
 </form>
