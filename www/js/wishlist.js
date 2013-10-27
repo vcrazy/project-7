@@ -3,21 +3,23 @@ $(document).ready(function(){
 	var specs = [];
 
 	$('#uni').change(function(e){
-		var uni_id = $(e.target).val();
+		var uni_id = $(e.target).val() * 1;
 
 		$('.faculty_change:not(.hidden)').addClass('hidden');
 		$('.specialty_change:not(.hidden)').addClass('hidden');
 		$('#faculty_' + uni_id).removeClass('hidden');
         
-        if ($('#faculty_' + uni_id).hasClass('hidden')) {
-            $('#faculty_show').addClass('hidden');
+//        if ($('#faculty_' + uni_id).hasClass('hidden')) {
+//            $('#faculty_show').addClass('hidden');
 //            $('#faculty_show').toggleClass('hidden', uni_id);
-        } else {
-          $('#faculty_show').removeClass('hidden');  
-        }
-        
-        $('#faculty_show').toggleClass('hidden', uni_id);
-        
+//        } else {
+//          $('#faculty_show').removeClass('hidden');  
+//        }
+//        
+//        $('#faculty_show').toggleClass('hidden', uni_id);
+
+		$('.faculty_text').toggleClass('hidden', !uni_id);
+
 		$('#save').addClass('hidden');
 		$('#specialty_info').text('');
 
