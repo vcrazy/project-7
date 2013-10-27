@@ -40,10 +40,15 @@
             </select>
             <?php endforeach; ?>
         </div>
+        
+        <input type="button" id="save" value="Избери" class="hidden" />
+        
+        <input type="submit" id="send" value="Изпрати всички" class="hidden" />
+        
+        <div class="info_wishlist">aa</div>
     </form>
 </div>
 
-	<input type="button" id="save" value="Избери" class="hidden" />
 
 	<div id="specialty_info">
 		
@@ -52,7 +57,5 @@
 	<div id="selected_specialties">
 		
 	</div>
-
-	<input type="submit" id="send" value="Изпрати всички" class="hidden" />
 
 </form>

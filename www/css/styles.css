@@ -43,3 +43,7 @@ select::-moz-focus-inner {
 .terms {
 	font-weight: bold;
 }
+
+.info_wishlist {
+    width:700px;
+}
