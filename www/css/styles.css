@@ -112,8 +112,18 @@ select::-moz-focus-inner {
 	margin-left: 600px;
 	text-align: right;
 }
+#left-arrow{
+    float: right;
+    margin-right: 150px;
+    margin-top: 20px;
+}
+#right-arrow{
+    float: right;
+    margin-right: 340px;
+    margin-top: 20px;
+}
 #exam-arrow {
-        background: url("/img/icons-navigation-arrows.png");
+        background: url("/img/icons-arrow-left.png");
         width:55px;
         height:55px;
         position:absolute;
@@ -123,10 +133,11 @@ select::-moz-focus-inner {
     
 }
 
-#right-arrow {
-    margin-right: 23%;
-    margin-top: 20px;
-    float: right;
+#apply-arrow {
+    background: url("/img/icons-arrow-right.png");
+    width:55px;
+    height:55px;
+    position:absolute;
 }
 #navigation{
     background-position:-300px 0;
