@@ -60,10 +60,18 @@
     </div>
     <div class="row show-grid">
         <div class="span3 column-data profile-cell">
-        	<h4>Матура:</h4>
+        	<h4>Матура "БЕЛ" (задължителна):</h4>
         </div>
         <div class="span3 column-data profile-cell verticle-center data-cell">
-        	<h4><?php echo $profile["ocenka_matura"]; ?></h4>
+        	<h4><?php echo $profile["ocenka_matura_BEL"]; ?></h4>
+        </div>
+    </div>
+		<div class="row show-grid">
+        <div class="span3 column-data profile-cell">
+        	<h4>Матура "Математика" (изборна):</h4>
+        </div>
+        <div class="span3 column-data profile-cell verticle-center data-cell">
+        	<h4><?php echo $profile["ocenka_matura_izborna"]; ?></h4>
         </div>
     </div>
     <div class="span4"></div> 

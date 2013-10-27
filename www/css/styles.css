@@ -196,3 +196,7 @@ select::-moz-focus-inner {
 h2.green {
     color:#b3e603 !important;
 }
+
+.span8 {
+	margin-left: 0px !important;
+}
