@@ -5,14 +5,40 @@
 	 */
 ?>
 <div id="top-bar"></div>
-<!--User info-->
-<section id="user-section-info">
+
+<div class="form_container">
+    <h1 class="blue">Профилни данни:</h1>
+    <span class="form_span_profile_left">Име / Презиме / Фамилия:</span>
+    <div class="form_span_profile_right">
+        <div class="half_border">
+            <strong><?php echo $profile["name"]; ?> <?php echo $profile["father_name"]; ?> <?php echo $profile["surname"]; ?></strong>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <br/>
+     <span class="form_span_profile_left">Диплома:</span>
+    <div class="form_span_profile_right">
+        <div class="half_border">
+            <?php echo $profile["ocenka_diploma"]; ?>
+        </div>
+    </div>
+     <div class="clear"></div>
+    <br/>
+     <span class="form_span_profile_left">Матура:</span>
+    <div class="form_span_profile_right">
+        <div class="half_border">
+           <?php echo $profile["ocenka_matura"]; ?>
+        </div>
+    </div>
+</div>
+
+<!--<section id="user-section-info">
     <div class="span4"></div> 
     <div id="user-tabel" class="bs-docs-grid span8">
     <div class="row show-grid">
         <div class="span2"></div>
         <div class="span2 table-label">
-            <h2>Профил:</h2>
+            <h2>Профилни данни:</h2>
         </div>
         <div class="span8"></div>
     </div>
@@ -41,7 +67,7 @@
         </div>
     </div>
     <div class="span4"></div> 
-</section>
+</section>-->
 
 <!--Examp scores-->
 <!--

@@ -166,3 +166,34 @@
 #user-section-info{
 	margin:auto !important;
 }
+
+.form_span_profile_left {
+    display:inline-block;
+    padding-left:30px;
+    float:left;
+    width:30%;
+    margin:0 !important;
+    margin-bottom:10px;
+}
+
+.form_span_profile_right {   
+    float:left;
+    width:70%;
+    margin:0 !important;
+    text-align:left;
+    padding-left:50px;
+    margin-bottom:10px;
+}
+
+div.half_border {
+    padding-bottom:5px;
+    text-align:center;
+    width:250px;
+    border:0;
+    border-right:1px solid #007acf;
+    border-bottom:1px solid #007acf;
+}
+
+h1.blue {
+    color:#007acf !important;
+}
