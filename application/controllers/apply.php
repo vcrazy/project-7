@@ -20,7 +20,7 @@ class Apply extends MY_Controller
 			foreach ($universities_subjects as $single_line) 
 			{
 				$this->data['unis'][$single_line['uni_id']]=$single_line['uni_name'];
-				$subjectinfo=array('name'=>$single_line['subject_name'],'info'=>'alabla data '.$single_line['dateof']);
+				$subjectinfo=array('name'=>$single_line['subject_name'],'info'=>'Дата '.date("d.m.Y",  strtotime($single_line['dateof'])));
 				if (!isset($this->data['exams'][$single_line['uni_id']]))
 				{
 					$this->data['exams'][$single_line['uni_id']]=array();

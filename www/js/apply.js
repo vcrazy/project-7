@@ -6,8 +6,8 @@ $(document).ready(function(){
 		var uni_id = $(e.target).val();
 
 		$('.uni_change:not(.hidden)').addClass('hidden');
-		$('#exams_' + uni_id).removeClass('hidden');
-		$('#save').addClass('hidden');
+		$('.exams_for_' + uni_id).removeClass('hidden');
+//		$('#save').addClass('hidden');
 		$('#exam_info').text('');
 
 		$('#specialty_show').removeClass('hidden');
@@ -19,7 +19,7 @@ $(document).ready(function(){
 		var uni_id = $('#uni').val(),
 			exam_id = $(e.target).val() * 1;
 
-		$('#save').toggleClass('hidden', !exam_id);
+//		$('#save').toggleClass('hidden', !exam_id);
 
 		$(e.target).closest('.specialty_holder').find('.exam_info').text(exams[uni_id][exam_id].info);
 
@@ -27,6 +27,8 @@ $(document).ready(function(){
 		$('.specialty_holder:last').bind('change', exam_change);
 
 		$('.exam_info:last').text('');
+
+		$('#send').removeClass('hidden');
 	};
 
 	$('.exam_change').bind('change', exam_change);
@@ -34,11 +36,7 @@ $(document).ready(function(){
 //	$('#save').click(function(){
 	$('#send').click(function(e){
 		var uni_id = $('#uni').val(),
-			uni_name = $('#uni option[value=' + uni_id + ']').text(),
-			exam_elements = $('.exam_change:not(:last)'),
-			exam_ids= [];
-
-		$('#selected_exams').append('<div>' + uni_name + ': ' + exam_name + '</div>');
+			exam_elements = $('.exams_for_' + uni_id + ':not(:last)');
 
 		$.each(exam_elements, function(a, x){
 			unis.push({
@@ -46,9 +44,8 @@ $(document).ready(function(){
 				exam_id: $(x).val()
 			});
 		});
-		console.log(unis);return false;
 
-		$('#exams_' + uni_id).find('option[value=' + exam_id + ']').remove();
+//		$('#exams_' + uni_id).find('option[value=' + exam_id + ']').remove();
 
 		if($('#exams_' + uni_id + ' option').length <= 1){
 
@@ -60,16 +57,18 @@ $(document).ready(function(){
 			}
 		}
 
-		$('#save').addClass('hidden');
+//		$('#save').addClass('hidden');
 		$('#send').removeClass('hidden');
-		$('#exam_info').text('');
+//		$('#exam_info').text('');
 //	});
 //
 //	$('#send').click(function(e){
 		$(e.target).closest('form').append('<input type="hidden" name="data" />');
 		$(e.target).closest('form').find('input[type=hidden]').val(JSON.stringify(unis));
 
-		return true;
+		$(e.target).closest('form').submit();
+
+		return false;
 	});
 
 });
