@@ -22,6 +22,7 @@
 	padding: 15px 20px;
 	margin: 20px 0px;
 	line-height: 20px;
+	color:#888;
 }
 
 .column-data.center {
@@ -161,4 +162,7 @@
 .data-cell{
 	border-bottom:1px solid #007acf;
 	border-right:1px solid #007acf;
+}
+#user-section-info{
+	margin:auto !important;
 }
