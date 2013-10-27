@@ -86,7 +86,8 @@ select::-moz-focus-inner {
 
 #profile_info_top div.one {
 	position: absolute;
-	width: 900px;
+	width: 300px;
+	margin-left: 600px;
 	text-align: right;
 }
 

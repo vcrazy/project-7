@@ -19,6 +19,8 @@
 <article id="wrapper">
 <header>
 	<div id="site-logo">
-		<img src="/img/applied-logo.jpg" alt="Applied Logo"/>
+		<a href="/">
+			<img src="/img/applied-logo.jpg" alt="Applied Logo"/>
+		</a>
 	</div>
 </header>
