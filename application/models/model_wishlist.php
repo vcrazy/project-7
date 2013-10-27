@@ -47,7 +47,10 @@ class Model_wishlist extends MY_Model
 		$this->db->join('faculties AS f', 's.faculty_id = f.id');
 		$this->db->join('universities AS u', 'f.uni_id = u.id');
 		$this->db->join('standing AS st', 'sw.student_id = st.user_id AND sw.specialty_id = st.specialty_id', 'left');
-		$this->db->where('sw.student_id', $user_id);
+		if($user_id)
+		{
+			$this->db->where('sw.student_id', $user_id);
+		}
 		$query = $this->db->get();
 
 		return $this->results($query);

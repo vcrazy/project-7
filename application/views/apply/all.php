@@ -25,11 +25,12 @@
 	<div class="span1 column-data height70 <?php echo $status_word; ?> center">
 		<?php echo date("d.m.Y", strtotime($application['dateof'])); ?>
 	</div>
-	<div class="span1 column-data height70 <?php echo $status_word; ?> center image">
-		<img src="/img/no.gif" class="status_<?php echo $application['grade'] ? ((int)$application['grade'] > 2) : 2; ?>" />
+
+	<div class="span1 column-data <?php echo $status_word; ?> center image">
+		<img src="/img/no.gif" class="status_<?php echo (int)$application['grade'] ? (int)((int)$application['grade'] > 2) : 2; ?>" />
 	</div>
-	<div class="span1 column-data height70 <?php echo $status_word; ?> center grade">
-		<?php echo $application['grade'] ?: '---'; ?>
+	<div class="span1 column-data <?php echo $status_word; ?> center grade">
+		<?php echo (int)$application['grade'] ? $application['grade'] : '---'; ?>
 	</div>
 </div>
 <?php endforeach; ?>
