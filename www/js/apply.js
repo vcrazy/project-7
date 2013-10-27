@@ -10,34 +10,43 @@ $(document).ready(function(){
 		$('#save').addClass('hidden');
 		$('#exam_info').text('');
 
+		$('#specialty_show').removeClass('hidden');
+
 		$('#exams_' + uni_id + ' option:first').attr('selected', true);
 	});
 
-	$('.uni_change').change(function(e){
+	var exam_change = function(e){
 		var uni_id = $('#uni').val(),
 			exam_id = $(e.target).val() * 1;
 
 		$('#save').toggleClass('hidden', !exam_id);
 
-		if(exam_id){
-			$('#exam_info').text(exams[uni_id][exam_id].info);
-		}else{
-			$('#exam_info').text('');
-		}
-	});
+		$(e.target).closest('.specialty_holder').find('.exam_info').text(exams[uni_id][exam_id].info);
 
-	$('#save').click(function(){
+		$($(e.target).closest('.specialty_holder')).clone().appendTo('#specialty_show');
+		$('.specialty_holder:last').bind('change', exam_change);
+
+		$('.exam_info:last').text('');
+	};
+
+	$('.exam_change').bind('change', exam_change);
+
+//	$('#save').click(function(){
+	$('#send').click(function(e){
 		var uni_id = $('#uni').val(),
 			uni_name = $('#uni option[value=' + uni_id + ']').text(),
-			exam_id = $('#exams_' + uni_id).val(),
-			exam_name = $('#exams_' + uni_id + ' option[value=' + exam_id + ']').text();
+			exam_elements = $('.exam_change:not(:last)'),
+			exam_ids= [];
 
 		$('#selected_exams').append('<div>' + uni_name + ': ' + exam_name + '</div>');
 
-		unis.push({
-			uni_id: uni_id,
-			exam_id: exam_id
+		$.each(exam_elements, function(a, x){
+			unis.push({
+				uni_id: uni_id,
+				exam_id: $(x).val()
+			});
 		});
+		console.log(unis);return false;
 
 		$('#exams_' + uni_id).find('option[value=' + exam_id + ']').remove();
 
@@ -54,9 +63,9 @@ $(document).ready(function(){
 		$('#save').addClass('hidden');
 		$('#send').removeClass('hidden');
 		$('#exam_info').text('');
-	});
-
-	$('#send').click(function(e){
+//	});
+//
+//	$('#send').click(function(e){
 		$(e.target).closest('form').append('<input type="hidden" name="data" />');
 		$(e.target).closest('form').find('input[type=hidden]').val(JSON.stringify(unis));
 
