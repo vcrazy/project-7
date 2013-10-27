@@ -26,19 +26,22 @@
                 </select>
             <?php endforeach; ?>
         </div>
+        
+        <div id="specialty_show">
+            <h1>ЗА СЛЕДНИТЕ СПЕЦИАЛНОСТИ:</h1>
+            <div class="sub_title">/подредени във възходящ ред/</div>
+            <span class="form_span_info specialty_text hidden">Специалност:</span>
+            <?php foreach($specialties as $faculty_id => $specialty_data): ?>
+            <select id="specialty_<?php echo $faculty_id; ?>" class="hidden specialty_change form_select">
+                    <option value="0">Моля, изберете специалност</option>
+                <?php foreach($specialty_data as $specialty_id => $specialty_data): ?>
+                    <option value="<?php echo $specialty_id; ?>"><?php echo $specialty_data['name']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <?php endforeach; ?>
+        </div>
     </form>
 </div>
-
-	<?php foreach($specialties as $faculty_id => $specialty_data): ?>
-
-		<select id="specialty_<?php echo $faculty_id; ?>" class="hidden specialty_change form_select">
-				<option value="0">Моля, изберете специалност</option>
-			<?php foreach($specialty_data as $specialty_id => $specialty_data): ?>
-				<option value="<?php echo $specialty_id; ?>"><?php echo $specialty_data['name']; ?></option>
-			<?php endforeach; ?>
-		</select>
-
-	<?php endforeach; ?>
 
 	<input type="button" id="save" value="Избери" class="hidden" />
 
