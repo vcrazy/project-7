@@ -63,6 +63,8 @@ class Apply extends MY_Controller
                     {
                         $this->Model_apply->save_student_exams($insert_student_exams);
                     }
+                    header("Location: /apply/all");
+                    exit();
                 }
             }
         }
