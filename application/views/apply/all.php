@@ -38,8 +38,6 @@
 <div class="span3"></div>
 
 <div class="clear"></div>
-<a id="request_button" href="/apply">
-	Заявка за изпит
-</a>
+<a id="request_button" href="/apply">Заявка за изпит</a>
 
 </section>
