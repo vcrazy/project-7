@@ -24,21 +24,9 @@
                     <?php endforeach; ?>
                 </select>
             <?php endforeach; ?>
-        <div>
+        </div>
     </form>
 </div>
-
-	<?php foreach($faculties as $uni_id => $faculties_data): ?>
-
-		<select id="faculty_<?php echo $uni_id; ?>" class="hidden faculty_change form_select">
-				<option value="0">Моля, изберете факултет</option>
-			<?php foreach($faculties_data as $faculty_id => $faculty_name): ?>
-				<option value="<?php echo $faculty_id; ?>"><?php echo $faculty_name; ?></option>
-			<?php endforeach; ?>
-		</select>
-
-	<?php endforeach; ?>
-
 	<?php foreach($specialties as $faculty_id => $specialty_data): ?>
 
 		<select id="specialty_<?php echo $faculty_id; ?>" class="hidden specialty_change form_select">
