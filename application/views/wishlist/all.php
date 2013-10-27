@@ -29,7 +29,7 @@
 
 	</div>
 	<div class="span2 column-data bh <?php echo $status_word; ?> position">
-		<p><strong>място: <?php echo $application['position']; ?></strong></p>
+		<p><strong>място: <?php echo $application['bal'] ? $application['position'] : '---'; ?></strong></p>
 		<p>от общо <?php echo $application['total']; ?></p>
 	</div>
 </div>
