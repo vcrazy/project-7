@@ -1,12 +1,60 @@
 .column-info{
-	border-bottom: 1px solid #b3e603;
-	color:  #838383;
+	border-bottom: 2px solid #b3e603;
+	color: #838383;
 	margin-bottom: 10px;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 12px;
+	padding-bottom: 3px;
 }
+
+.column-info.green {
+	border-bottom: 2px solid #831f82;
+}
+
+.column-info.center {
+	padding-left: 0px;
+	text-align: center;
+}
+
 .column-data{
-	height:90px;
-	text-align:center;
+	text-align: left;
+	padding: 15px 20px;
+	margin: 20px 0px;
+	line-height: 20px;
 }
+
+.column-data.center {
+	padding: 15px 0px;
+	text-align: center;
+}
+
+.column-data.image {
+	padding: 0px;
+}
+
+.column-data.grade {
+	font-weight: bold;
+	font-size: 20px;
+	padding-top: 12px;
+}
+
+.column-data.bh {
+	height: 130px;
+}
+
+.column-data.bh.image {
+	padding-top: 42px;
+}
+
+.column-data.bh.grade {
+	padding-top: 52px;
+}
+
+.column-data.bh.position {
+	padding-top: 37px;
+}
+
 .verticle-center{
 	/* Internet Explorer 10 */
 	display:-ms-flexbox;
@@ -33,12 +81,64 @@
 .waiting{
 	background-color:#F1F1F1;
 }
-.done{
-
-}
 .accepted > div:first-child{
 	color:rgb(16, 192, 16);
 }
 .not-accepted > div:first-child{
 	color:rgb(231, 34, 34);
+}
+
+
+.status_2 {
+	width: 43px;
+	height: 43px;
+	background: url('/img/icons-status.png');
+}
+
+.status_1 {
+	width: 43px;
+	height: 43px;
+	background: url('/img/icons-status.png') 86px;
+}
+
+.status_0 {
+	width: 43px;
+	height: 43px;
+	background: url('/img/icons-status.png') 43px;
+}
+
+#ranking h2 {
+	color: #831f82;
+	text-align: left;
+	font-size: 24px;
+	margin: 50px 20px;
+    font-family: 'SEGOEUIL' !important;
+	text-transform: uppercase;
+}
+
+#request_button {
+	display: inline-block;
+	width: 340px;
+	padding: 20px 40px;
+	background-color: #670666;
+	font-size: 24px;
+    font-family: 'SEGOEUIL' !important;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 5px;
+	margin: 80px 0px;
+}
+
+#request_button:hover {
+	cursor: pointer;
+	background-color: #831f82;
+	text-decoration: none;
+}
+
+#request_button.green {
+	background-color: #9ABE1D;
+}
+
+#request_button.green:hover {
+	background-color: #b3e603;
 }
