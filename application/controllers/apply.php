@@ -54,7 +54,6 @@ class Apply extends MY_Controller
                             }
                             if ($this->Model_apply->check_student_exam($user_id,$uni_subject_id['id']) ==0)
                             {
-                                var_dump($uni_subject_id['id']);
                                 $insert_student_exams[]=array('student_id'=>1,'uni_subject_id'=>$uni_subject_id['id']);
                             }
                         }
@@ -67,9 +66,6 @@ class Apply extends MY_Controller
                 }
             }
         }
-        
-//        var_dump($this->data['unis']);
-        var_dump($this->data['exams']);
         
 		$this->data['view'] = 'apply/index';
 		$this->load_view();

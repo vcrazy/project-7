@@ -127,3 +127,7 @@ select::-moz-focus-inner {
     width:66%;
     margin-bottom:20px;
 }
+
+.height70 {
+    height:70px;
+}
