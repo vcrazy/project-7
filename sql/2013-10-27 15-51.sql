@@ -17,14 +17,6 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- БД: `t3stovet_project7_1`
---
-CREATE DATABASE IF NOT EXISTS `t3stovet_project7_1` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `t3stovet_project7_1`;
-
--- --------------------------------------------------------
-
---
 -- Структура на таблица `ci_sessions`
 --
 DROP TABLE IF EXISTS ci_sessions;
@@ -42,13 +34,6 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 -- Схема на данните от таблица `ci_sessions`
 --
-
-INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('ef73cf9272effa9576f6344736f77896', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', 1382784846, ''),
-('3a7a14be3cba874f4ed9d26b5a208ae2', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', 1382796189, ''),
-('a7f8a46abcc68d97dc58112de4458b80', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', 1382811664, ''),
-('99413b2e09ff261441dc3182ad4817f0', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', 1382830452, 'a:9:{s:2:"id";s:1:"1";s:3:"egn";s:10:"9005039206";s:4:"name";s:15:"Гергана ";s:11:"father_name";s:18:"Станилова";s:7:"surname";s:14:"Петрова";s:10:"mob_number";s:10:"0877877899";s:14:"ocenka_diploma";s:4:"4.50";s:13:"ocenka_matura";s:4:"5.10";s:9:"is_logged";i:1;}'),
-('ae29e9b008ccb60d37008f8d21118910', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', 1382862653, 'a:10:{s:9:"user_data";s:0:"";s:2:"id";s:1:"1";s:3:"egn";s:10:"9005039206";s:4:"name";s:15:"Гергана ";s:11:"father_name";s:18:"Станилова";s:7:"surname";s:14:"Петрова";s:10:"mob_number";s:10:"0877877899";s:14:"ocenka_diploma";s:4:"4.50";s:13:"ocenka_matura";s:4:"5.10";s:9:"is_logged";i:1;}');
 
 -- --------------------------------------------------------
 
@@ -364,8 +349,8 @@ INSERT INTO `users` (`id`, `egn`, `name`, `father_name`, `surname`, `mob_number`
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-UPDATE  `t3stovet_project7`.`users` SET  `ocenka_diploma` =  '5.12', `ocenka_matura_izborna` =  '4.63' WHERE  `users`.`id` =1;
+UPDATE  `users` SET  `ocenka_diploma` =  '5.12', `ocenka_matura_izborna` =  '4.63' WHERE  `users`.`id` =1;
 
-UPDATE  `t3stovet_project7`.`students_exams` SET  `grade` =  '5.19' WHERE  `students_exams`.`id` =1;
+UPDATE  `students_exams` SET  `grade` =  '5.19' WHERE  `students_exams`.`id` =1;
 
 ALTER TABLE specialties ADD COLUMN entry_number int(11) DEFAULT 50;
