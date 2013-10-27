@@ -13,6 +13,8 @@ $(document).ready(function(){
 		$('#specialty_show').removeClass('hidden');
 
 		$('#exams_' + uni_id + ' option:first').attr('selected', true);
+
+		$('#apply-add').removeClass('hidden');
 	});
 
 	var exam_change = function(e){
@@ -23,12 +25,7 @@ $(document).ready(function(){
 
 		$(e.target).closest('.specialty_holder').find('.exam_info').text(exams[uni_id][exam_id].info);
 
-		$($(e.target).closest('.specialty_holder')).clone().appendTo('#specialty_show');
-		$('.specialty_holder:last').bind('change', exam_change);
-
-		$('.exam_info:last').text('');
-
-		$('#send').removeClass('hidden');
+		$('#send, .info_wishlist').removeClass('hidden');
 	};
 
 	$('.exam_change').bind('change', exam_change);
@@ -36,13 +33,15 @@ $(document).ready(function(){
 //	$('#save').click(function(){
 	$('#send').click(function(e){
 		var uni_id = $('#uni').val(),
-			exam_elements = $('.exams_for_' + uni_id + ':not(:last)');
+			exam_elements = $('.exams_for_' + uni_id);
 
 		$.each(exam_elements, function(a, x){
-			unis.push({
-				uni_id: uni_id,
-				exam_id: $(x).val()
-			});
+			if($(x).val()){
+				unis.push({
+					uni_id: uni_id,
+					exam_id: $(x).val()
+				});
+			}
 		});
 
 //		$('#exams_' + uni_id).find('option[value=' + exam_id + ']').remove();
@@ -58,7 +57,7 @@ $(document).ready(function(){
 		}
 
 //		$('#save').addClass('hidden');
-		$('#send').removeClass('hidden');
+//		$('#send, #apply-add').removeClass('hidden');
 //		$('#exam_info').text('');
 //	});
 //
@@ -71,4 +70,12 @@ $(document).ready(function(){
 		return false;
 	});
 
+	$('#apply-add').click(function(e){
+		$($(e.target).closest('form').find('select:visible:nth(1)').closest('.specialty_holder')).clone().appendTo('#specialty_show');
+		$('.specialty_holder:last').bind('change', exam_change);
+
+		$('.exam_info:last').text('');
+
+		return false;
+	});
 });

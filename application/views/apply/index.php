@@ -30,18 +30,19 @@
 				<?php endforeach; ?>
 				<span class="specialty_text exam_info"></span>
 			</div>
+		</div>
+
+		<a href="#" id="apply-add" class="hidden">Добави поле за изпит</a>
         
-        <div>
-            <div class="info_wishlist height100 hidden">
-                <div id="left_info_panel">
-                    <span class="info_span"></span>
-                </div>
-                <div id="right_info_panel">
-                    Уникален номер, ден и час на явяване за всеки от избраните изпити ще получите<br/>
-                    допълнително, след като учебното заведение публикува информация
-                </div>
-            </div>
-        </div>
+		<div class="info_wishlist height100 hidden">
+			<div id="left_info_panel">
+				<span class="info_span"></span>
+			</div>
+			<div id="right_info_panel">
+				Уникален номер, ден и час на явяване за всеки от избраните изпити ще получите<br/>
+				допълнително, след като учебното заведение публикува информация
+			</div>
+		</div>
 
 		<a id="send" href="/apply" class="hidden button_aplpy">КАНДИДАТСТВАЙ</a>
     </form>
