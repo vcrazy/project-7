@@ -42,3 +42,5 @@
 </a>
 
 </section>
+
+<?php include APPPATH . '/views/wishlist/suggestions.php'; ?>
