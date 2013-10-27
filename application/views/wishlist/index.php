@@ -6,8 +6,6 @@
 	});
 </script>
 
-<form method="post" action="">
-
 <div class="form_container">
     <form method="post" action="">
         <h1>ЖЕЛАЯ ДА КАНДИДАТСТВАМ ЗА:</h1>
@@ -79,4 +77,4 @@
 		
 	</div>-->
 
-</form>
+
