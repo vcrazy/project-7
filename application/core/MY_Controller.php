@@ -13,6 +13,11 @@ class MY_Controller extends CI_Controller
 			header("Location: /home");
 			exit;
 		}
+		else if($this->data['controller'] == 'home' && $this->session->userdata('is_logged'))
+		{
+			header("Location: /wishlist/all");
+			exit;
+		}
 
 		$this->data['logged'] = $this->session->userdata('is_logged');
 
