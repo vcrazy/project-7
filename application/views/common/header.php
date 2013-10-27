@@ -26,11 +26,11 @@
 </header>
     <?php if($controller != 'home'): ?>
     <div id="navigation">
-        <div id="left-arrow" >
-             <a href="/apply/all" id='exam-arrow'>&nbsp;</a>
-        </div>
         <div id="right-arrow" >
              <a href="/apply/all" id='apply-arrow'>&nbsp;</a>
+        </div>
+        <div id="left-arrow" >
+             <a href="/apply/all" id='exam-arrow'>&nbsp;</a>
         </div>
     </div>
 
