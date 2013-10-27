@@ -31,20 +31,6 @@ select::-moz-focus-inner {
     margin:0 !important;
 }
 
-.status_2 {
-	width: 43px;
-	height: 43px;
-	background: url('/img/icons-status.png');
-}
-
-.status_1 {
-	width: 43px;
-	height: 43px;
-	background: url('/img/icons-status.png') 86px;
-}
-
-.status_0 {
-	width: 43px;
-	height: 43px;
-	background: url('/img/icons-status.png') 43px;
+.terms {
+	font-weight: bold;
 }

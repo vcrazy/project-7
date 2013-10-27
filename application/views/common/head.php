@@ -6,6 +6,7 @@
                 <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
                 <link href="/css/styles.css" rel="stylesheet" type="text/css" />
                 <link rel="stylesheet" type="text/css" href="/css/mainPage.css"/>
+                <link rel="stylesheet" type="text/css" href="/css/table.css"/>
                 <link rel="stylesheet" type="text/css" href="/css/userLogin.css"/>
                 <script src="/js/jquery.min.js" type="text/javascript"></script>
                 <script src="/js/json3.min.js" type="text/javascript"></script>
