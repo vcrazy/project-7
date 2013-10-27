@@ -28,7 +28,7 @@ $(document).ready(function(){
 		$('.specialties_for_' + faculty_id).removeClass('hidden');
 		$('.specialties_for_' + faculty_id + ' option:first').attr('selected', true);
 
-		$('.specialty_holder[data-faculty=' + faculty_id + ']').toggleClass('hidden', faculty_id);
+		$('.specialty_holder').toggleClass('hidden', faculty_id);
 	});
 
 	var specialty_change = function(e){
@@ -47,7 +47,9 @@ $(document).ready(function(){
 
 		$('#save').toggleClass('hidden', !specialty_id);
 
-		$($(e.target).closest('.specialty_holder')).clone().appendTo('#all_spec');
+		$($(e.target).closest('.specialty_holder')).clone().appendTo('#specialty_show');
+		$('.specialty_holder:last').bind('change', specialty_change);
+		$('.specialty_holder:last .spec_num').text($('.specialty_holder:last .spec_num').text() * 1 + 1);
 
 //		if(specialty_id){
 //			$('#specialty_info').text(specialties[faculty_id][specialty_id].info);
