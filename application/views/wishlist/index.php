@@ -29,7 +29,7 @@
             <?php endforeach; ?>
         </div>
         
-        <div id="specialty_show">
+        <div id="specialty_show" class="hidden">
             <h1>ЗА СЛЕДНИТЕ СПЕЦИАЛНОСТИ:</h1>
             <div class="sub_title">/подредени във възходящ ред/</div>
 			<div class="specialty_holder hidden">
@@ -45,12 +45,10 @@
 			</div>
         </div>
         
-        <input type="button" id="save" value="Избери" class="hidden" />
-        
         <input type="submit" id="send" value="Изпрати всички" class="hidden" />
         
         <div>
-            <div class="info_wishlist">
+            <div class="info_wishlist hidden">
                 <div id="left_info_panel">
                     <span class="info_span"></span>
                 </div>
