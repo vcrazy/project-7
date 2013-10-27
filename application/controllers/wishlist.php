@@ -81,8 +81,14 @@ class Wishlist extends MY_Controller
 	{
 		$this->load->model('Model_wishlist');
 		$applications = $this->Model_wishlist->get_applications();
+        
 
 		$this->data['applications'] = $applications;
+        $this->data['suggestions']=array();
+        $this->data['suggestions'][]=array('s_name'=>'Софтуерно инженерство',
+            'u_name'=>'Софийски университет "Св. Климент Охридски"',
+            'f_name'=>'Факултет математика и информатика','total'=>50);
+        
 
 		$this->data['view'] = 'wishlist/all';
 		$this->load_view();

@@ -139,6 +139,10 @@ select::-moz-focus-inner {
     height:55px;
     position:absolute;
 }
+#apply-arrow:hover {
+    text-decoration:none;
+}
+
 #navigation{
     background-position:-300px 0;
     background-image:url('/img/page-exam-header.jpg'); 
