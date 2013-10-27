@@ -31,8 +31,7 @@
             <h1>ЗА СЛЕДНИТЕ СПЕЦИАЛНОСТИ:</h1>
             <div class="sub_title">/подредени във възходящ ред/</div>
 			<div class="specialty_holder hidden">
-				<span class="spec_num">1</span>
-				<span class="form_span_info specialty_text hidden">Специалност:</span>
+				<span class="form_span_info specialty_text"><span class="spec_num">1</span> Специалност:</span>
 				<?php foreach($specialties as $faculty_id => $specialty_data): ?>
 				<select class="hidden specialty_change form_select specialties_for_<?php echo $faculty_id; ?>">
 						<option value="0">Моля, изберете специалност</option>
@@ -48,7 +47,29 @@
         
         <input type="submit" id="send" value="Изпрати всички" class="hidden" />
         
-        <div class="info_wishlist">aa</div>
+        <div>
+            <div class="info_wishlist">
+                <div id="left_info_panel">
+                    <span class="info_span"></span>
+                </div>
+                <div id="right_info_panel">
+                    Вашият състезателен бал за избраните специалности на
+                    Факултет по математика и информатика към Софийски университет "Св. Климент Охридски"
+                    образуван на база на текущите данни:<br/><br/>
+                    Най-висока оценка от положен изпит по <i>Математика 2</i> : <strong>5.19</strong><br/>
+                    Оценка от матура по <i>Математика</i> : <strong>4.63</strong><br/>
+                    Оценка от диплома по <i>Математика</i> : <strong>5.12</strong><br/><br/>
+                    
+                    Състезателния бал образуван по формулата (предвид най-висок бал):<br/>
+                    3* Математика 2 + Математика(диплома)
+                    2* Математика 1 + Математика(диплома) или
+                    2* Математика(матура) + Математика(диплома)
+
+                    Бал (24 максимален бал*)
+                </div>
+
+            </div>
+        </div>
     </form>
 </div>
 
