@@ -85,6 +85,27 @@ select::-moz-focus-inner {
 	margin: 0 auto;
 }
 
+.button_aplpy {
+    display: inline-block;
+	width: 340px;
+	padding: 20px 40px;
+	background-color: #b3e603;
+	font-size: 24px;
+    font-family: 'SEGOEUIL' !important;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 5px;
+	margin-top: 20px;
+    margin-bottom:30px;
+}
+
+.button_aplpy:hover {
+	cursor: pointer;
+	background-color: #b3f603;
+	text-decoration: none;
+    color:white;
+}
+
 #profile_info_top div.one {
 	position: absolute;
 	width: 300px;

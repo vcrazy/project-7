@@ -47,7 +47,7 @@
         
         <input type="button" id="save" value="Избери" class="hidden" />
         
-        <input type="submit" id="send" value="Изпрати всички" class="hidden" />
+        <!--<input type="submit" id="send" value="Изпрати всички" class="hidden" />-->
         
         <div>
             <div class="info_wishlist">
@@ -68,8 +68,8 @@
                     <span style="font-size:12px;">Състезателния бал образуван по формулата (предвид най-висок бал):<br/>
                     3* Математика 2 + Математика(диплома)</span>
                 </div>
-
             </div>
+             <a id="send" href="/apply" class="hidden button_aplpy">КАНДИДАТСТВАЙ</a>
         </div>
     </form>
 </div>
