@@ -17,24 +17,23 @@
         </select>
         
         <div id="specialty_show" class="hidden">
-            <h1>НА СЛЕДНИТЕ ИЗПИТИ:</h1>
+            <h1 class="purple">НА СЛЕДНИТЕ ИЗПИТИ:</h1>
 			<div class="specialty_holder">
 				<span class="form_span_info specialty_text">Изпит:</span>
-				<?php foreach($exams as $uni_id => $uni_exams): ?>
-				<select class="hidden exam_change exams_for_<?php echo $uni_id; ?>">
-						<option value="0">Моля, изберете изпит</option>
-					<?php foreach($uni_exams as $exam_id => $exam_data): ?>
-						<option value="<?php echo $exam_id; ?>"><?php echo $exam_data['name']; ?></option>
-					<?php endforeach; ?>
-				</select>
-				<?php endforeach; ?>
-				<span class="specialty_text exam_info"></span>
+                    <?php foreach($exams as $uni_id => $uni_exams): ?>
+                    <select class="hidden exam_change form_select_apply_short exams_for_<?php echo $uni_id; ?>">
+                            <option value="0">Моля, изберете изпит</option>
+                        <?php foreach($uni_exams as $exam_id => $exam_data): ?>
+                            <option value="<?php echo $exam_id; ?>"><?php echo $exam_data['name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <?php endforeach; ?>
+				<span class="specialty_text exam_info form_info_date"></span>
 			</div>
 		</div>
-
+        <div class="clear"></div>
 		<a href="#" id="apply-add" class="hidden">Добави поле за изпит</a>
-        
-		<div class="info_wishlist height100 hidden">
+		<div class="info_wishlist height100 margin_top_15 hidden">
 			<div id="left_info_panel">
 				<span class="info_span"></span>
 			</div>
@@ -44,6 +43,6 @@
 			</div>
 		</div>
 
-		<a id="send" href="/apply" class="hidden button_aplpy">КАНДИДАТСТВАЙ</a>
+		<a id="send" href="/apply" class="hidden button_aplpy purple_background">ЗАПИШИ МЕ НА ИЗПИТ</a>
     </form>
 </div>

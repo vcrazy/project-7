@@ -66,6 +66,9 @@ class Wishlist extends MY_Controller
                     {
                         $this->Model_wishlist->save_student_wishlist($insert_student_wishlist);
                     }
+                    
+                    header("Location: /wishlist/all");
+                    exit();
                 }
             }
         }

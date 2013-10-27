@@ -148,6 +148,10 @@ select::-moz-focus-inner {
     color:#670666 !important;
 }
 
+.purple_background {
+    background-color: #670666 !important;
+}
+
 .height100 {
     height:100px !important;
 }
@@ -157,4 +161,30 @@ select::-moz-focus-inner {
     border-bottom:1px solid #670666;
     width:66%;
     margin-bottom:20px;
+}
+
+.form_select_apply_short {
+    border:none;
+    border-bottom:1px solid #670666;
+    width:40%;
+    margin-bottom:20px;
+    float:left;
+}
+
+.form_info_date {
+    width:26%;
+    float:left; 
+}
+
+.height70 {
+    height:70px;
+}
+
+#apply-add {
+    color:#831f82;
+    text-decoration:underline;
+}
+
+#apply-add:hover {
+    text-decoration:none;
 }
