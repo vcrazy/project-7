@@ -6,7 +6,7 @@
 ?>
 <div id="top-bar"></div>
 
-<div class="form_container">
+<div class="form_container font_norm">
     <h1 class="blue">Профилни данни:</h1>
     <span class="form_span_profile_left">Име / Презиме / Фамилия:</span>
     <div class="form_span_profile_right">
@@ -24,10 +24,18 @@
     </div>
      <div class="clear"></div>
     <br/>
-     <span class="form_span_profile_left">Матура:</span>
+     <span class="form_span_profile_left">Матура по Български език и литература:</span>
     <div class="form_span_profile_right">
         <div class="half_border">
-           <?php echo $profile["ocenka_matura"]; ?>
+           <?php echo $profile["ocenka_matura_BEL"]; ?>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <br/>
+     <span class="form_span_profile_left">Матура по Математика:</span>
+    <div class="form_span_profile_right">
+        <div class="half_border">
+           <?php echo $profile["ocenka_matura_izborna"]; ?>
         </div>
     </div>
 </div>

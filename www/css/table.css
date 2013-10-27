@@ -171,14 +171,15 @@
     display:inline-block;
     padding-left:30px;
     float:left;
-    width:30%;
+    width:35%;
     margin:0 !important;
     margin-bottom:10px;
+    text-align:right;
 }
 
 .form_span_profile_right {   
     float:left;
-    width:70%;
+    width:65%;
     margin:0 !important;
     text-align:left;
     padding-left:50px;
@@ -196,4 +197,9 @@ div.half_border {
 
 h1.blue {
     color:#007acf !important;
+}
+
+.font_norm {
+    font-weight:'SEGOE UI';
+    font-size:14px;
 }
