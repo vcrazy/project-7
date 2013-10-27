@@ -113,3 +113,17 @@ select::-moz-focus-inner {
 	text-align: right;
 }
 
+.purple {
+    color:#670666 !important;
+}
+
+.height100 {
+    height:100px !important;
+}
+
+.form_select_apply {
+    border:none;
+    border-bottom:1px solid #670666;
+    width:66%;
+    margin-bottom:20px;
+}
