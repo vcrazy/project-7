@@ -15,29 +15,19 @@
                 <option value="<?php echo $uni_id; ?>"><?php echo $uni_name; ?></option>
             <?php endforeach; ?>
         </select><br/>
-        <div id="faculty_show" class="hidden">
+        <div id="faculty_show">
+			<span class="form_span_info faculty_text hidden">Факултет:</span>
             <?php foreach($faculties as $uni_id => $faculties_data): ?>
-                <span class="form_span_info">Факултет:</span><select id="faculty_<?php echo $uni_id; ?>" class="hidden faculty_change form_select">
+                <select id="faculty_<?php echo $uni_id; ?>" class="hidden faculty_change form_select">
                         <option value="0">Моля, изберете факултет</option>
                     <?php foreach($faculties_data as $faculty_id => $faculty_name): ?>
                         <option value="<?php echo $faculty_id; ?>"><?php echo $faculty_name; ?></option>
                     <?php endforeach; ?>
                 </select>
             <?php endforeach; ?>
-        <div>
+        </div>
     </form>
 </div>
-
-	<?php foreach($faculties as $uni_id => $faculties_data): ?>
-
-		<select id="faculty_<?php echo $uni_id; ?>" class="hidden faculty_change form_select">
-				<option value="0">Моля, изберете факултет</option>
-			<?php foreach($faculties_data as $faculty_id => $faculty_name): ?>
-				<option value="<?php echo $faculty_id; ?>"><?php echo $faculty_name; ?></option>
-			<?php endforeach; ?>
-		</select>
-
-	<?php endforeach; ?>
 
 	<?php foreach($specialties as $faculty_id => $specialty_data): ?>
 
