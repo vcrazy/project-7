@@ -8,20 +8,11 @@ $(document).ready(function(){
 		$('.faculty_change:not(.hidden)').addClass('hidden');
 		$('.specialty_change:not(.hidden)').addClass('hidden');
 		$('#faculty_' + uni_id).removeClass('hidden');
-        
-//        if ($('#faculty_' + uni_id).hasClass('hidden')) {
-//            $('#faculty_show').addClass('hidden');
-//            $('#faculty_show').toggleClass('hidden', uni_id);
-//        } else {
-//          $('#faculty_show').removeClass('hidden');  
-//        }
-//        
-//        $('#faculty_show').toggleClass('hidden', uni_id);
 
 		$('.faculty_text').toggleClass('hidden', !uni_id);
 
 		$('#save').addClass('hidden');
-		$('#specialty_info').text('');
+//		$('#specialty_info').text('');
 
 		$('#faculty_' + uni_id + ' option:first').attr('selected', true);
 	});
@@ -30,14 +21,17 @@ $(document).ready(function(){
 		var faculty_id = $(e.target).val() * 1;
 
 		$('.specialty_change:not(.hidden)').addClass('hidden');
-		$('#specialty_' + faculty_id).toggleClass('hidden', !faculty_id);
+//		$('.specialties_for_' + faculty_id).toggleClass('hidden', !faculty_id);
 		$('#save').addClass('hidden');
-		$('#specialty_info').text('');
+//		$('#specialty_info').text('');
 
-		$('#specialty_' + faculty_id + ' option:first').attr('selected', true);
+		$('.specialties_for_' + faculty_id).removeClass('hidden');
+		$('.specialties_for_' + faculty_id + ' option:first').attr('selected', true);
+
+		$('.specialty_holder[data-faculty=' + faculty_id + ']').toggleClass('hidden', faculty_id);
 	});
 
-	$('.specialty_change').change(function(e){
+	var specialty_change = function(e){
 		var faculty_id,
 			specialty_id = $(e.target).val();
 
@@ -53,12 +47,16 @@ $(document).ready(function(){
 
 		$('#save').toggleClass('hidden', !specialty_id);
 
-		if(specialty_id){
-			$('#specialty_info').text(specialties[faculty_id][specialty_id].info);
-		}else{
-			$('#specialty_info').text('');
-		}
-	});
+		$($(e.target).closest('.specialty_holder')).clone().appendTo('#all_spec');
+
+//		if(specialty_id){
+//			$('#specialty_info').text(specialties[faculty_id][specialty_id].info);
+//		}else{
+//			$('#specialty_info').text('');
+//		}
+	};
+
+	$('.specialty_change').bind('change', specialty_change);
 
 	$('#save').click(function(){
 		var uni_id = $('#uni').val(),
@@ -95,7 +93,7 @@ $(document).ready(function(){
 
 		$('#save').addClass('hidden');
 		$('#send').removeClass('hidden');
-		$('#specialty_info').text('');
+//		$('#specialty_info').text('');
 	});
 
 	$('#send').click(function(e){
