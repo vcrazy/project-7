@@ -109,7 +109,9 @@ $(document).ready(function(){
 		$(e.target).closest('form').append('<input type="hidden" name="data" />');
 		$(e.target).closest('form').find('input[type=hidden]').val(JSON.stringify(specs));
 
-		return true;
+		$(e.target).closest('form').submit();
+
+		return false;
 	});
 
 });

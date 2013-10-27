@@ -65,7 +65,7 @@
                     3* Математика 2 + Математика(диплома)</span>
                 </div>
             </div>
-             <a id="send" href="/apply" class="hidden button_aplpy">КАНДИДАТСТВАЙ</a>
+			<a id="send" href="/apply" class="hidden button_aplpy">КАНДИДАТСТВАЙ</a>
         </div>
     </form>
 </div>
