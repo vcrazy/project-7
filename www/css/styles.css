@@ -1,3 +1,7 @@
+select::-moz-focus-inner {
+  border: 0;
+}
+
 .form_container {
     margin:0 auto;
     width:1000px;
@@ -9,13 +13,22 @@
     font-size:24px;
     font-weight:300 !important;
     text-align:left;
-    color:#831f82;
+    color:#81a600;
     font-family:'SEGOEUIL' !important;
+    margin-bottom:40px;
 }
 
-#uni {
+.form_select {
     border:none;
-    border-bottom:1px solid #831f82;
+    border-bottom:1px solid #b3e603;
+    width:66%;
+    margin-bottom:20px;
+}
+
+.form_span_info {
+    display:inline-block;
+    width:34%;
+    margin:0 !important;
 }
 
 .status_2 {
