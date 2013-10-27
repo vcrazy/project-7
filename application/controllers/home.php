@@ -40,4 +40,11 @@ class Home extends MY_Controller
             $this->data['view'] = 'home/main';
             $this->load_view();
         }
+
+		public function logout()
+		{
+			$this->session->sess_destroy();
+			header("Location: /");
+			exit;
+		}
 }
