@@ -2,7 +2,7 @@
 
 <div class="span3"></div> 
 <div class="bs-docs-grid span8">
-<h2>Кандидатстване</h2>
+<h2 class="green">Кандидатстване</h2>
 	<div id="table-column-info" class="row show-grid">
 	<div class="span4 column-info">Кандидатура | (Специалност, Университет, Факултет)</div>
 	<div class="span1 column-info center">Бал</div>

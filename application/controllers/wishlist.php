@@ -89,6 +89,9 @@ class Wishlist extends MY_Controller
             'u_name'=>'Софийски университет "Св. Климент Охридски"',
             'f_name'=>'Факултет математика и информатика','total'=>50);
         
+        $this->data['suggestions'][]=array('s_name'=>'Информатика',
+            'u_name'=>'Софийски университет "Св. Климент Охридски"',
+            'f_name'=>'Факултет математика и информатика','total'=>50);
 
 		$this->data['view'] = 'wishlist/all';
 		$this->load_view();

@@ -192,3 +192,7 @@ select::-moz-focus-inner {
 #apply-add:hover {
     text-decoration:none;
 }
+
+h2.green {
+    color:#b3e603 !important;
+}

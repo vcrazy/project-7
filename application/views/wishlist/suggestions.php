@@ -2,7 +2,7 @@
 
 <div class="span3"></div> 
 <div class="bs-docs-grid span8">
-<h2>Предложения за специалности</h2>
+<h2 class="green">Предложения за специалности</h2>
 	<div id="table-column-info" class="row show-grid">
 	<div class="span6 column-info">Специалност, Университет, Факултет</div>
 	<div class="span2 column-info">Класация</div>
