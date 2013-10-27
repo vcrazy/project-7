@@ -43,3 +43,14 @@ select::-moz-focus-inner {
 .terms {
 	font-weight: bold;
 }
+
+#profile_info_top {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#profile_info_top div.one {
+	position: absolute;
+	width: 900px;
+	text-align: right;
+}
