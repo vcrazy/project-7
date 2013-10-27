@@ -14,13 +14,24 @@
 		</div>
 	</div>
 </div>
-<?php endif; ?>
+<?php endif?>
 
 <article id="wrapper">
 <header>
-	<div id="site-logo">
-		<a href="/">
-			<img src="/img/applied-logo.jpg" alt="Applied Logo"/>
-		</a>
-	</div>
+ <div id="site-logo">
+    <a href="/">
+     <img src="/img/applied-logo.jpg" alt="Applied Logo"/>
+    </a>
+ </div>
 </header>
+    <?php if($controller != 'home'): ?>
+    <div id="navigation">
+        <div id="left-arrow" >
+             <a href="/apply/all" id='exam-arrow'>&nbsp;</a>
+        </div>
+        <div id="right-arrow" >
+             <a href="/apply/all" id='apply-arrow'>&nbsp;</a>
+        </div>
+    </div>
+
+<?php endif?>

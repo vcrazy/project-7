@@ -112,7 +112,27 @@ select::-moz-focus-inner {
 	margin-left: 600px;
 	text-align: right;
 }
+#exam-arrow {
+        background: url("/img/icons-navigation-arrows.png");
+        width:55px;
+        height:55px;
+        position:absolute;
+}
 
+#wishlist-arrow {
+    
+}
+
+#right-arrow {
+    margin-right: 23%;
+    margin-top: 20px;
+    float: right;
+}
+#navigation{
+    background-position:-300px 0;
+    background-image:url('/img/page-exam-header.jpg'); 
+    width:100%;height:100px;
+}
 .purple {
     color:#670666 !important;
 }
