@@ -30,9 +30,9 @@
 </div>
 <?php endforeach; ?>
 </div>  
-<div class="span3"></div> 
-<div class="clear"></div>
+<div class="span3"></div>
 
+<div class="clear"></div>
 <div id="request_button">
 	Заявка за изпит
 </div>
