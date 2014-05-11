@@ -4,10 +4,10 @@
 }
 #left-bar{
     background-color:#831f82;
-    width:53.65%;
+    width:53%;
 }
 #right-bar{
-	width:46.35%;
+	width:47%;
     background-color:#b3e603;
 }
 #nav-container{
@@ -22,15 +22,15 @@
 #left-link-container{
 	height:500px;
 	float:left;
-	width:53.65%;
+	width:53%;
 	background-image: url("/img/section-exap.jpg");
-    background-position: center;
+    background-position: right;
     background-repeat:no-repeat;
 }
 #right-link-container{
 	height:500px;
 	float:right;
-	width:46.35%;
+	width:47%;
 	background-image: url("/img/section-apply.jpg");
     background-position:left center;
     background-repeat:no-repeat;

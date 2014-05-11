@@ -81,7 +81,8 @@ select::-moz-focus-inner {
 
 
 #profile_info_top {
-	width: 900px;
+	display: block;
+	max-width: 1350px;
 	margin: 0 auto;
 }
 
@@ -109,7 +110,7 @@ select::-moz-focus-inner {
 #profile_info_top div.one {
 	position: absolute;
 	width: 300px;
-	margin-left: 600px;
+	margin-left: 1000px;
 	text-align: right;
 }
 #left-arrow{

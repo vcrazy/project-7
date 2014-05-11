@@ -43,11 +43,14 @@ footer a:hover{
     color:#789b00;
 }
 #wrapper{
+	margin: 0 auto;
     text-align:center;
+	max-width: 1350px;
 }
 #main{
     text-align:center;
-    background-image:url('/img/enter-header-small.jpg');
+	background:url('/img/enter-header-small.jpg') center center;
+	background-repeat: no-repeat;
     padding-bottom:100px;
 }
 #curtain-container{
